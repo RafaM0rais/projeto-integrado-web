@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cadastro</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../styles/output.css" rel="stylesheet" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+      integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="../scripts/buttonAction.js"></script>
+  </head>
+  <body class="flex flex-col h-screen bg-[#e6ded4e6] text-black font-serif">
+    <header class="flex flex-row h-20 top-0"></header>
+
+    <content class="flex w-screen h-screen justify-center">
+      <div class="flex flex-col w-2/12 h-5/6 rounded-3xl bg-[#d9cdbf]">
+        <div class="flex flex-row w-full h-16 justify-center items-center mt-3">
+          <h1 class="text-5xl font-thin">Cadastro</h1>
+          <img src="../assets/LOGO.svg" class="h-16" />
+        </div>
+        <div class="flex flex-col pt-8 items-center">
+          <form class="flex flex-col items-center justify-around">
+            <input type="text" id="fullname" placeholder="Nome Completo" class="w-72 h-10 form-input rounded-md" required />
+            <input type="email" id="email" placeholder="seuemail@email.com" class="mt-2 w-72 h-10 form-input rounded-md" required />
+            <input type="password" id="password" placeholder="Senha" class="mt-2 w-72 h-10 form-input rounded-md" required />
+            <input type="tel" id="phone" placeholder="(XX) X XXXX-XXXX" class="mt-2 w-72 h-10 form-input rounded-md" required />
+            <input type="submit" id="signin" value="Cadastrar" class="mt-2 w-72 h-10 bg-[#C8A287] rounded-2xl cursor-pointer font-semibold text-lg hover:shadow-md" />
+          </form>
+          <div class="flex w-72 h-10 mt-2 justify-center items-center hover:drop-shadow-xl hover:bg-[#e6ded4e6] hover:rounded-2xl">
+            <a class="flex" href="../index.html">
+              <i class="ph-bold ph-caret-left text-2xl text-[#C8A287]"></i>
+              <p class="text-base font-semibold">Voltar</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </content>
+  </body>
+</html>
