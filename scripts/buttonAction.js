@@ -13,30 +13,41 @@ $(document).ready(function () {
 
   $("#phone").mask("(00) 0 0000-0000");
 
-  $("#singin").click(function (event) {
+  $("#signin").click(function (event) {
     event.preventDefault();
+
     let fullname = String($("#fullname").val());
     let email = String($("#email").val());
     let password = String($("#password").val());
     let phone = String($("#phone").val().replace(/(\D)/g, ""));
 
-    $.ajax({
-      type: "POST",
-      crossDomain: true,
-      data: JSON.stringify({
+    if (fullname || email || password || phone) {
+      let cliente = {
         fullname: fullname,
         email: email,
         password: password,
-        phone: phone,
-      }),
-      url: "https://projeto-integrado-server.onrender.com/clientes",
-      success: function (data) {
-        console.log(data);
-        alert("Usuário cadastrado com sucesso");
-      },
-      dataType: "json",
-      contentType: "application/json",
-    });
-    createClient(fullname, email, phone);
+        cellphone: phone,
+      };
+
+      console.log(cliente);
+
+      $("#signin").val("Cadastrando...");
+
+      $.ajax({
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json",
+        crossDomain: true,
+        data: JSON.stringify(cliente),
+        url: "https://projeto-integrado-server.onrender.com/clientes",
+        success: function (data) {
+          console.log(data);
+          alert("Usuário cadastrado com sucesso");
+          $("#signin").val("Cadastrado");
+        },
+      });
+    } else {
+      $("#signin").val("Preencha o Formulário");
+    }
   });
 });

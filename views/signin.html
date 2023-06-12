@@ -14,6 +14,7 @@
       referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="../scripts/buttonAction.js"></script>
   </head>
+
   <body class="flex flex-col h-screen bg-[#e6ded4e6] text-black font-serif">
     <header class="flex flex-row h-20 top-0"></header>
 
@@ -24,13 +25,14 @@
           <img src="../assets/LOGO.svg" class="h-16" />
         </div>
         <div class="flex flex-col pt-8 items-center">
-          <form class="flex flex-col items-center justify-around">
+          <form id="signInForm" name="signInForm" class="flex flex-col items-center justify-around">
             <input type="text" id="fullname" placeholder="Nome Completo" class="w-72 h-10 form-input rounded-md" required />
             <input type="email" id="email" placeholder="seuemail@email.com" class="mt-2 w-72 h-10 form-input rounded-md" required />
             <input type="password" id="password" placeholder="Senha" class="mt-2 w-72 h-10 form-input rounded-md" required />
             <input type="tel" id="phone" placeholder="(XX) X XXXX-XXXX" class="mt-2 w-72 h-10 form-input rounded-md" required />
             <input type="submit" id="signin" value="Cadastrar" class="mt-2 w-72 h-10 bg-[#C8A287] rounded-2xl cursor-pointer font-semibold text-lg hover:shadow-md" />
           </form>
+
           <div class="flex w-72 h-10 mt-2 justify-center items-center hover:drop-shadow-xl hover:bg-[#e6ded4e6] hover:rounded-2xl">
             <a class="flex" href="../index.html">
               <i class="ph-bold ph-caret-left text-2xl text-[#C8A287]"></i>
