@@ -29,8 +29,6 @@ $(document).ready(function () {
         cellphone: phone,
       };
 
-      console.log(cliente);
-
       $.ajax({
         type: "POST",
         dataType: "json",
@@ -39,6 +37,8 @@ $(document).ready(function () {
         data: JSON.stringify(cliente),
         url: "https://projeto-integrado-server.onrender.com/clientes",
       });
+
+      $("#signin").val("Cadastrado");
     } else {
       $("#signin").val("Preencha o Formulário");
     }
