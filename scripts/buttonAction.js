@@ -31,8 +31,6 @@ $(document).ready(function () {
 
       console.log(cliente);
 
-      $("#signin").val("Cadastrando...");
-
       $.ajax({
         type: "POST",
         dataType: "json",
@@ -40,11 +38,6 @@ $(document).ready(function () {
         crossDomain: true,
         data: JSON.stringify(cliente),
         url: "https://projeto-integrado-server.onrender.com/clientes",
-        success: function (data) {
-          console.log(data);
-          alert("Usuário cadastrado com sucesso");
-          $("#signin").val("Cadastrado");
-        },
       });
     } else {
       $("#signin").val("Preencha o Formulário");
